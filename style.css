@@ -3,7 +3,7 @@
 -------------------- */
 
 :root {
-  --theme-color: #00a0a0;
+  --theme-color: #7BB1EA;
 }
 
 * {
@@ -19,6 +19,33 @@ body {
   margin: 0;
   padding: 30px;
   color: #333;
+  background-image:url(pattern.svg);
+  background-color: #EAF4FF;
+}
+
+h1, h2, h3, p, ul, li, table, section{
+  margin: 0;
+}
+
+img{
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.rbg-fff{
+  background: #FFF;
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+}
+
+section{
+  max-width: 600px;
+  margin:0 auto 30px;
+}
+
+.tit-mb{
+  margin-bottom: 20px;
 }
 
 /* --------------------
@@ -27,7 +54,11 @@ body {
 
 h1, h2, h3 {
   color: var(--theme-color);
+  padding: 10px 0 8px 10px;
   border-bottom: dashed 0.1em var(--theme-color);
+  border-radius: 10px 10px 0 0;
+  border-bottom: 2px dashed var(--theme-color);
+  background: #FFF;
 }
 
 /* --------------------
@@ -47,7 +78,9 @@ ul {
   list-style: none;
 }
 li:before {
-  content: "★";
+  font-size: 10px;
+  padding-right: 6px;
+  content: "●";
   color: var(--theme-color);
 }
 
@@ -58,8 +91,8 @@ li:before {
 table {
   border-spacing: 0;
   border-collapse: collapse;
-  border: solid 1px #f0f0f0;
-  min-width: 70%;
+  width: 100%;
+  border-radius: 10px;
 }
 tr {
   background-color: #fff;
@@ -74,4 +107,40 @@ th {
 th, td {
   border: solid 1px #f0f0f0;
   padding: 0.5rem;
+}
+
+tr:first-of-type th{
+  border-radius: 10px 0 0 0;
+}
+
+tr:first-of-type td{
+  border-radius: 0 10px 0 0;
+}
+
+tr:last-of-type th{
+  border-radius: 0 0 0 10px;
+}
+
+tr:last-of-type td{
+  border-radius: 0 0 10px 0;
+}
+
+/* --------------------
+      外部リンク
+-------------------- */
+iframe{
+  aspect-ratio: 16 / 9;
+  display: block;
+  margin: 0 auto;
+}
+
+/* --------------------
+     コピーライト
+-------------------- */
+footer {
+  color: var(--theme-color);
+  text-decoration: none;
+  text-align: center;
+  font-size: small;
+  padding: 10px;
 }
